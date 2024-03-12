@@ -4,7 +4,7 @@ from conect import conexao_db
 def main():
     st.set_page_config('Pesquisa Teste',page_icon='🔎',layout='wide')
     st.title('Bem vindo a Pesquisa Teste')
-
+    
     # Cria uma variável de sessão para armazenar o estado do questionário
     st.write('Olá! Esta pesquisa visa identificar o nível de maturidade de dados da sua empresa. As respostas serão utilizadas para avaliar a maturidade da sua organização em relação à governança, cultura, qualidade e uso de dados. A pesquisa é composta por 20 perguntas, divididas em 5 seções:')
 
@@ -23,13 +23,12 @@ def main():
     p8 = st.radio('8. A sua empresa possui um processo para incentivar o compartilhamento de dados entre diferentes departamentos?', ['Sim', 'Nao','Parcialmente'])
     p9 = st.radio('9. A sua empresa possui um processo para identificar e corrigir vieses nos dados?', ['Sim', 'Nao','Parcialmente'])
     p10 = st.radio('10.	A sua empresa possui um processo para garantir a privacidade e segurança dos dados?', ['Sim', 'Nao','Parcialmente'])
-    
+
     # Se o botão "Enviar" for clicado
     if st.button("Enviar"):
         # Envia os dados para o banco de dados
         conexao_db(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10)
-        st.experimental_redirect('https://pesquisapage2.streamlit.app')
-
+        st.subheader('Obrigado por responder nosso questionario!!!!')
 
 if __name__ == "__main__":
     main()
