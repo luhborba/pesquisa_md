@@ -28,6 +28,7 @@ def main():
     if st.button("Enviar"):
         # Envia os dados para o banco de dados
         conexao_db(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10)
+        st.experimental_redirect('https://pesquisapage2.streamlit.app')
 
 
 if __name__ == "__main__":
